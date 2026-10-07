@@ -14,7 +14,7 @@ Copy this file to `TEAM.md` in your team repository and complete it before start
 |---|---|
 | Student 1 | @Poloigout |
 | Student 2 | @makssito |
-| Student 3 | @github-user-3 |
+| Student 3 | @camilchentouf |
 
 Add a fourth row only if your team has four members.
 
