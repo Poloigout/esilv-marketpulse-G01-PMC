@@ -1,3 +1,4 @@
+
 # Team
 
 ## Repository
@@ -60,7 +61,7 @@ bloomberg_reference_sample.json
 instruments.json
 prices.csv
 ```
-
+<img width="716" height="509" alt="Capt1td1" src="https://github.com/user-attachments/assets/e98edb4f-4826-42ab-b0e7-87037129b13f" />
 ## Result
 
 A `result/` directory has been created for the project outputs:
