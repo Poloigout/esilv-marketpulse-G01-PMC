@@ -63,29 +63,39 @@ prices.csv
 
 ### Instrument
 
-The instrument information is stored in `data/sample/instruments.json`:
-
-```json
-{
-  "ticker": "AAPL",
-  "name": "Apple Inc.",
-  "currency": "USD",
-  "market": "NASDAQ"
-}
-```
-
-### Benchmark
-
-```json
-{
-  "ticker": "SP500",
-  "name": "S&P 500",
-  "currency": "USD",
-  "market": "US"
-}
-```
-
 The instrument and benchmark information is stored in `data/sample/instruments.json`.
+
+Command used to display it:
+
+```bash
+cat data/sample/instruments.json
+```
+
+Content:
+
+```json
+{
+  "instrument": {
+    "ticker": "AAPL",
+    "name": "Apple Inc.",
+    "currency": "USD",
+    "market": "NASDAQ"
+  },
+  "benchmark": {
+    "ticker": "SP500",
+    "name": "S&P 500",
+    "currency": "USD",
+    "market": "US"
+  }
+}
+```
+
+- `instrument`: AAPL - Apple Inc. (USD, NASDAQ)
+- `benchmark`: SP500 - S&P 500 (USD, US)
+
+<img width="601" height="230" alt="Capture d&#39;écran 2026-10-07 162636" src="https://github.com/user-attachments/assets/c6005d8f-9ff8-40dd-942d-3edbd8ad3e50" />
+
+
 
 ### Price data
 
@@ -100,6 +110,28 @@ The CSV contains the following columns:
 - `low`
 - `close`
 - `volume`
+
+Command used to preview the file:
+
+```bash
+head data/sample/prices.csv
+```
+
+```text
+date,ticker,open,high,low,close,volume
+2026-09-01,AAPL,249.20,251.50,248.00,250.00,38000000
+2026-09-01,SP500,6592.00,6615.00,6580.00,6600.00,0
+2026-09-02,AAPL,250.80,252.80,249.60,251.30,39500000
+2026-09-02,SP500,6607.00,6627.00,6595.00,6612.00,0
+2026-09-03,AAPL,249.60,251.30,248.40,249.80,41000000
+2026-09-03,SP500,6596.00,6613.00,6584.00,6598.00,0
+2026-09-04,AAPL,251.30,253.60,250.10,252.10,42500000
+2026-09-04,SP500,6612.00,6635.00,6600.00,6620.00,0
+2026-09-08,AAPL,251.90,253.90,250.70,252.40,44000000
+```
+
+<img width="638" height="153" alt="image" src="https://github.com/user-attachments/assets/92e93237-bc5a-4959-bf34-b2ded5ce632f" />
+
 
 It contains daily observations for:
 
@@ -159,6 +191,9 @@ Observations : 21
 First close : 6600.0
 Last close : 6742.0
 ```
+
+<img width="644" height="252" alt="Capture d&#39;écran 2026-10-07 160627" src="https://github.com/user-attachments/assets/252b9ba9-a270-4420-9c25-699d08e80965" />
+
 
 ## Project files used
 
