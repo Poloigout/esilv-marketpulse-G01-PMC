@@ -1,4 +1,5 @@
 
+
 # Team
 
 ## Repository
@@ -69,6 +70,7 @@ A `result/` directory has been created for the project outputs:
 ```text
 result/
 ```
+<img width="778" height="378" alt="Capture d&#39;écran 2026-10-07 155347" src="https://github.com/user-attachments/assets/f2ae9a92-3a60-493a-8a99-c1305d1fda1a" />
 Sample data
 Instrument
 {
