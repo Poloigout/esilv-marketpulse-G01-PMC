@@ -1,5 +1,6 @@
 
 
+
 # Team
 
 ## Repository
@@ -152,3 +153,4 @@ Benchmark  : SP500 - S&P 500
 Period     : 1 month
 Interval   : Daily
 Provider   : CSV
+<img width="599" height="409" alt="Capture d&#39;écran 2026-10-07 155704" src="https://github.com/user-attachments/assets/a9bc04d9-2771-4241-aad3-680955892dc4" />
