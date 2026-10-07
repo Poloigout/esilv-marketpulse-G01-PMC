@@ -30,47 +30,71 @@ result/
 src/
 ```
 
-## Sample data
+## Data
 
-### Instrument
+The data directory is located at:
 
-```json
+```text
+/workspaces/esilv-marketpulse-G01-PME/data
+```
+
+It contains:
+
+```text
+sample/
+```
+
+### Sample data
+
+The sample directory is located at:
+
+```text
+/workspaces/esilv-marketpulse-G01-PME/data/sample
+```
+
+Files currently available:
+
+```text
+bloomberg_reference_expected.json
+bloomberg_reference_sample.json
+instruments.json
+prices.csv
+```
+
+## Result
+
+A `result/` directory has been created for the project outputs:
+
+```text
+result/
+```
+Sample data
+Instrument
 {
   "ticker": "AAPL",
   "name": "Apple Inc.",
   "currency": "USD",
   "market": "NASDAQ"
 }
-```
-
-### Benchmark
-
-```json
+Benchmark
 {
   "ticker": "SP500",
   "name": "S&P 500",
   "currency": "USD",
   "market": "US"
 }
-```
 
 The instrument and benchmark information is stored in:
 
-```text
 data/sample/instruments.json
-```
-
-## Price data
+Price data
 
 The price data is stored in:
 
-```text
 data/sample/prices.csv
-```
 
 The CSV contains the following columns:
 
-```text
 date
 ticker
 open
@@ -78,40 +102,27 @@ high
 low
 close
 volume
-```
 
 It contains daily observations for:
 
-* **AAPL** — Apple Inc.
-* **SP500** — S&P 500
+AAPL — Apple Inc.
+SP500 — S&P 500
 
-There are **21 observations for AAPL** and **21 observations for SP500**.
+There are 21 observations for AAPL and 21 observations for SP500.
 
-## Environment
-
-### Python
-
-```text
+Environment
+Python
 Python 3.14.2
-```
-
-### Git
-
-```text
+Git
 git version 2.55.0
-```
-
-## MarketPulse execution
+MarketPulse execution
 
 The application is launched with:
 
-```bash
 python src/main.py
-```
 
 The program successfully returns:
 
-```text
 === MarketPulse ===
 
 Instrument
@@ -128,22 +139,13 @@ Interval: Daily
 Observations
 AAPL: 21
 SP500: 21
-```
-
-## Project files used
-
-```text
+Project files used
 src/main.py
 data/sample/instruments.json
 data/sample/prices.csv
-```
-
-### Summary
-
-```text
+Summary
 Instrument : AAPL - Apple Inc.
 Benchmark  : SP500 - S&P 500
 Period     : 1 month
 Interval   : Daily
 Provider   : CSV
-```
