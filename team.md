@@ -14,7 +14,7 @@ Copy this file to `TEAM.md` in your team repository and complete it before start
 |---|---|
 | Paul_IGOUT | @Poloigout |
 | Maxence_GILOT | @makssito |
-| Student 3 | @camilchentouf |
+| Camil_CHENTOUF| @camilchentouf |
 
 Add a fourth row only if your team has four members.
 
