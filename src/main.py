@@ -8,6 +8,12 @@ DATA_DIR = Path("data/sample")
 LOOKBACK_LABEL = "1_month"
 INTERVAL_LABEL = "Daily"
 
+def get_first_date(prices):
+    return prices[0]["date"]
+
+
+def get_last_date(prices):
+    return prices[-1]["date"]
 
 def load_instruments():
     with open(DATA_DIR / "instruments.json", encoding="utf-8") as file:
@@ -49,7 +55,9 @@ def display_market_summary(asset, prices, show_currency=True):
 
     first_close = get_first_close(prices)
     last_close = get_last_close(prices)
-
+    print("Observations :", len(prices))
+    print("First date :", get_first_date(prices))
+    print("Last date :", get_last_date(prices))
     print(ticker + " - " + name)
     print("Observations :", len(prices))
 
@@ -103,6 +111,7 @@ def main():
         benchmark_prices,
         False
     )
+
 
 
 if __name__ == "__main__":
