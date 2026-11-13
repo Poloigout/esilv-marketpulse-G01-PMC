@@ -5,7 +5,7 @@ import json
 
 DATA_DIR = Path("data/sample")
 
-LOOKBACK_LABEL = "1 month"
+LOOKBACK_LABEL = "1_month"
 INTERVAL_LABEL = "Daily"
 
 
