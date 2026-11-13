@@ -1,4 +1,4 @@
-# TD03 - Git Local Workflow
+     # TD03 - Git Local Workflow
 
 ## Duration
 
@@ -13,7 +13,6 @@
 ```
 
 ## Context
-
 TD02 produced meaningful Python changes in MarketPulse.
 
 TD03 gives those changes a history.
@@ -211,6 +210,8 @@ If the values are missing or clearly incorrect, ask the instructor before contin
 
 Do not copy another student's Git identity.
 
+![alt text](image.png)
+
 # Part 3 - Inspect the real TD02 changes
 
 TD03 should start from the useful Python work completed in TD02.
@@ -236,6 +237,8 @@ src/main.py
 or another file legitimately modified during TD02.
 
 Do not create an artificial change if meaningful TD02 work is already available.
+![alt text](image-1.png)
+
 
 ## Questions
 
@@ -246,6 +249,13 @@ Be able to answer:
 3. Which lines were removed?
 4. Does the diff match the work you intended?
 5. Is there temporary debugging output that should be removed before committing?
+
+ANWERS:
+ 1. src/main.py is modified (tracked). result/image-1.png is untracked.
+2. One line was added: LOOKBACK_LABEL = "1 month only"
+3. One line was removed: LOOKBACK_LABEL = "1 month"
+4. Yes, the diff matches the intended change: only the LOOKBACK_LABEL text was updated.
+5. No, there is no temporary debugging output (no print or debug lines).
 
 The required habit is:
 
@@ -295,6 +305,13 @@ tracked file modified
 untracked file
 staged change
 ```
+![alt text](image-2.png)
+![alt text](image-3.png)
+![alt text](image-4.png)
+
+![alt text](image-5.png)
+![alt text](image-6.png)
+
 
 # Part 5 - Stage the intended change
 
@@ -338,7 +355,7 @@ with:
 ```bash
 git diff --staged
 ```
-
+![alt text](image-7.png)
 You should be able to explain:
 
 ```text
@@ -350,7 +367,8 @@ git diff --staged
 =
 changes selected for the next commit
 ```
-
+ASWER: git diff shows unstaged changes (working directory vs. index).
+git diff --staged shows staged changes (index vs. last commit), i.e. what will go into the next commit.
 # Part 6 - Create the first meaningful commit
 
 Before committing, verify MarketPulse:
@@ -404,34 +422,45 @@ Run:
 git status
 git log --oneline
 ```
+![alt text](image-8.png)
+![alt text](image-9.png)
 
 Your new commit should appear near the top.
 
 Identify:
 
 ```text
-short commit identifier
-commit message
+short commit identifier :
+ea71f34 (HEAD -> Paul_IGOUT) 
+commit message : TD03-1st stage
 ```
 
 Inspect the latest commit:
 
 ```bash
 git show HEAD
-```
+```!
 
 or use its identifier:
 
 ```bash
 git show <commit-id>
 ```
-
+![alt text](image-11.png)
 Be able to explain:
 
 1. which files changed;
 2. what the diff represents;
 3. why the commit message is appropriate;
 4. who is recorded as the author.
+
+ANSWERS:ANSWERS:
+1. src/main.py changed (one line in LOOKBACK_LABEL).
+2. The diff shows the line "1 month" replaced by "1 month_only".
+3. The message "TD03-1st stage" is short and tied to this TD
+4. The author is me : Poloigout
+
+
 
 # Part 8 - Commit quality and traceability
 
@@ -523,6 +552,18 @@ git commit
 git log
 git show
 ```
+
+ANSWERS : working tree: the files I am currently editing on disk.
+                   staging area: where I select the exact changes for the next commit.
+                    commit: a saved snapshot of the staged changes, with author, date and message.
+                    commit identifier: the unique hash that identifies a commit (e.g. ea71f34).
+                    git status: shows the repository state (modified, staged, untracked files).
+                    git diff: shows unstaged changes (working tree vs. staging area).
+                    git diff --staged: shows staged changes (staging area vs. last commit).
+                   git add: moves changes from the working tree to the staging area.
+                    git commit: records the staged changes in the local history.
+                    git log: lists the commit history (git log --oneline gives a short version).
+                    git show: displays one commit's details and its diff (e.g. git show HEAD).
 
 If those concepts and commands are understood, TD03 CORE is complete.
 
